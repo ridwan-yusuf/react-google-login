@@ -3,10 +3,10 @@ import loadScript from './load-script'
 import removeScript from './remove-script'
 
 const useGoogleLogin = ({
-  onSuccess = () => {},
-  onAutoLoadFinished = () => {},
-  onFailure = () => {},
-  onRequest = () => {},
+  onSuccess = () => { },
+  onAutoLoadFinished = () => { },
+  onFailure = () => { },
+  onRequest = () => { },
   onScriptLoadFailure,
   clientId,
   cookiePolicy,
@@ -90,7 +90,8 @@ const useGoogleLogin = ({
           ux_mode: uxMode,
           redirect_uri: redirectUri,
           scope,
-          access_type: accessType
+          access_type: accessType,
+          state: 'test'
         }
 
         if (responseType === 'code') {
